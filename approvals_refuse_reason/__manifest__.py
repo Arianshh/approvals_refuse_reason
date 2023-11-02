@@ -11,7 +11,7 @@
     "website": "https://github.com/Arianshh",
     "summary": "Adds reason to refuse process.",
     "depends": ['approvals'],
-    'images': ['static/description/header.png'],
+    'images': ['static/description/header.jpg'],
     "data": ['security/ir.model.access.csv',
              'wizards/reject_wizard.xml',
              'views/approval_request_views.xml', ],
