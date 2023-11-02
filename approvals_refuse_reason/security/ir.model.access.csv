@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_approval_refuse_user,hr.approval.refuse.group_user,model_hr_approval_refuse,base.group_user,1,1,1,0
+access_hr_approval_refuse_officer,hr.approval.refuse.group_hr_user,model_hr_approval_refuse,hr.group_hr_user,1,1,1,1
+access_hr_approval_refuse_manager,hr.approval.refuse,model_hr_approval_refuse,hr.group_hr_manager,1,1,1,1
+hr.approval.refuse.reason_user,hr.approval.refuse.reason.group_user,model_hr_approval_refuse_reason,base.group_user,1,1,1,0
+hr.approval.refuse.reason_officer,hr.approval.refuse.reason.group_hr_user,model_hr_approval_refuse_reason,hr.group_hr_user,1,1,1,1
+hr.approval.refuse.reason_manager,hr.approval.refuse.reason,model_hr_approval_refuse_reason,hr.group_hr_manager,1,1,1,1

@@ -1,0 +1,28 @@
+<odoo>
+    <record id="approval_request_view_form_inherit" model="ir.ui.view">
+        <field name="name">approval.request.view.tree</field>
+        <field name="model">approval.request</field>
+        <field name="priority">10</field>
+        <field name="inherit_id" ref="approvals.approval_request_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_refuse']" position="replace">
+                <button name="%(approval_refuse_wizard_action)d"
+                        type="action"
+                        string="Refuse"
+                        attrs="{'invisible':[('user_status','!=','pending')]}"/>
+            </xpath>
+            <xpath expr="//page[@name='approvers']//field//field[@name='status']" position="after">
+                <field name="refusal_reason"/>
+            </xpath>
+<!--            <xpath expr="//field[@name='request_owner_id']" position="after">-->
+<!--                <field name="refusal_reason_ids" widget="one2many" readonly="1" force_save="1">-->
+<!--                    <tree>-->
+<!--                        <field name="approver_id"/>-->
+<!--                        <field name="reason"/>-->
+<!--                    </tree>-->
+
+<!--                </field>-->
+<!--            </xpath>-->
+        </field>
+    </record>
+</odoo>
